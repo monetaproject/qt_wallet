@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 2.8.11)
 find_package(Git QUIET)
 
 project(qt_wallet)
-set( APP_NAME "BitShares" )
+set( APP_NAME "Sparkle" )
 
 # Tell CMake where to find our custom Info.plist template
 list( APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/CMakeModules" )
@@ -75,7 +75,7 @@ set( SOURCES
   MainWindow.cpp
   BitSharesApp.cpp
   html5viewer/html5viewer.cpp
-  images/bitshares.icns
+  images/sparkle.icns
 )
 
 file( GLOB TS_FILES translations/*.ts )
@@ -85,7 +85,7 @@ set( CPACK_BUNDLE_NAME ${APP_NAME} )
 set( CPACK_PACKAGE_NAME ${CPACK_BUNDLE_NAME} )
 set( CPACK_PACKAGE_EXECUTABLES qt_wallet ${CPACK_BUNDLE_NAME} )
 set( CPACK_PACKAGE_DESCRIPTION_SUMMARY "package description summary" )
-set( CPACK_PACKAGE_VENDOR "BitShares" )
+set( CPACK_PACKAGE_VENDOR "Sparkle" )
 set( CPACK_PACKAGE_VERSION_MAJOR ${VERSION_MAJOR} )
 set( CPACK_PACKAGE_VERSION_MINOR ${VERSION_MINOR} )
 set( CPACK_PACKAGE_VERSION_PATCH ${VERSION_PATCH} )
@@ -94,24 +94,24 @@ set( CPACK_PACKAGE_FILE_NAME ${CPACK_BUNDLE_NAME} )
 get_filename_component( QT_PATH ${Qt5Core_DIR}/../../../ ABSOLUTE )
 
 IF( APPLE )
-    set ( OSX_ICON_FILE "${CMAKE_CURRENT_SOURCE_DIR}/images/bitshares.icns" )
+    set ( OSX_ICON_FILE "${CMAKE_CURRENT_SOURCE_DIR}/images/sparkle.icns" )
     SET_SOURCE_FILES_PROPERTIES( "${OSX_ICON_FILE}" PROPERTIES MACOSX_PACKAGE_LOCATION Resources )
     SET( MACOSX_BUNDLE_BUNDLE_NAME ${CPACK_BUNDLE_NAME} )
     SET( MACOSX_BUNDLE_EXECUTABLE_NAME ${CPACK_BUNDLE_NAME} )
     SET( MACOSX_BUNDLE_GUI_IDENTIFIER "org.bitshares.bts" )
-    SET( MACOSX_BUNDLE_ICON_FILE "bitshares.icns" )
-    SET( MACOSX_BUNDLE_INFO_STRING "BitShares v${VERSION_MAJOR}.${VERSION_MINOR}.${VERSION_PATCH}" )
+    SET( MACOSX_BUNDLE_ICON_FILE "sparkle.icns" )
+    SET( MACOSX_BUNDLE_INFO_STRING "Sparkle v${VERSION_MAJOR}.${VERSION_MINOR}.${VERSION_PATCH}" )
     SET( MACOSX_BUNDLE_SHORT_VERSION_STRING "${VERSION_MAJOR}.${VERSION_MINOR}.${VERSION_PATCH}" )
     SET( MACOSX_BUNDLE_LONG_VERSION_STRING "${VERSION_MAJOR}.${VERSION_MINOR}.${VERSION_PATCH}" )
     SET( MACOSX_BUNDLE_BUNDLE_VERSION "${VERSION_MAJOR}.${VERSION_MINOR}.${VERSION_PATCH}" )
-    SET( MACOSX_BUNDLE_COPYRIGHT "(C) 2014 BitShares" )
+    SET( MACOSX_BUNDLE_COPYRIGHT "(C) 2014 Sparkle" )
     SET( MACOSX_BUNDLE_URL_HANDLER_NAME "${MACOSX_BUNDLE_GUI_IDENTIFIER}" )
     SET( MACOSX_BUNDLE_URL_HANDLER_SCHEME "${CUSTOM_URL_SCHEME}" )
-    set_source_files_properties("images/bitshares.icns" PROPERTIES MACOSX_PACKAGE_LOCATION Resources)
+    set_source_files_properties("images/sparkle.icns" PROPERTIES MACOSX_PACKAGE_LOCATION Resources)
 ENDIF()
 
 IF( "${CMAKE_SYSTEM_NAME}" MATCHES "Linux" )
-    CONFIGURE_FILE("${CMAKE_CURRENT_SOURCE_DIR}/BitShares.desktop.in" "${CMAKE_CURRENT_BINARY_DIR}/${APP_NAME}.desktop")
+    CONFIGURE_FILE("${CMAKE_CURRENT_SOURCE_DIR}/Sparkle.desktop.in" "${CMAKE_CURRENT_BINARY_DIR}/${APP_NAME}.desktop")
 ENDIF()
 
 IF( WIN32 )
