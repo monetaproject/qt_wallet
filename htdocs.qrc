@@ -9,7 +9,9 @@
     <file>htdocs/locale-ru.json</file>
     <file>htdocs/locale-zh-CN.json</file>
     <file>htdocs/css/app.css</file>
+	<file>htdocs/css/app.css.map</file>
     <file>htdocs/img/bg-head.jpg</file>
+	<file>htdocs/img/xt-background.jpg</file>
     <file>htdocs/img/bitsharesIcon.png</file>
     <file>htdocs/img/bitsharesTransparentLow.png</file>
     <file>htdocs/img/bs-double-trans.png</file>
@@ -27,7 +29,9 @@
     <file>htdocs/img/signal_3.png</file>
     <file>htdocs/img/signal_4.png</file>
     <file>htdocs/img/user.png</file>
+	<file>htdocs/img/xts-logo-xl-white-shadow.png</file>
     <file>htdocs/js/app.js</file>
+	<file>htdocs/js/app.js.map</file>
     <file>htdocs/webfonts/fontawesome-webfont.eot</file>
     <file>htdocs/webfonts/fontawesome-webfont.ttf</file>
     <file>htdocs/webfonts/fontawesome-webfont.woff</file>
